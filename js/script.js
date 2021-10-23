@@ -68,16 +68,16 @@ function drawOnCanvas(e) {
 	if (e.which == 1) {
 		canvasContext.fillStyle = targetColor;
 		canvasContext.beginPath();
-		for(var i = 0; i < 5; i++){
-	        x = Math.cos((18+72*i-fiveStart.RotationAngle)/180*Math.PI);
-	        x = x*fiveStart.bigRadius+e.offsetX;
-	        y = -Math.sin((18+72*i-fiveStart.RotationAngle)/180*Math.PI);
-	        y = y*fiveStart.bigRadius+e.offsetY;
+		for(let i = 0; i < 5; i++){
+	        x = Math.cos((18 + 72 * i - fiveStart.RotationAngle) / 180 * Math.PI);
+	        x = x * fiveStart.bigRadius + e.offsetX;
+	        y = -Math.sin((18 + 72 * i - fiveStart.RotationAngle) / 180 * Math.PI);
+	        y = y * fiveStart.bigRadius + e.offsetY;
 	        canvasContext.lineTo(x,y);
-	        x = Math.cos((54+i*72-fiveStart.RotationAngle)/180*Math.PI);
-	        x = x*fiveStart.smallRadius+e.offsetX;
-	        y = -Math.sin((54+i*72-fiveStart.RotationAngle)/180*Math.PI);
-	        y = y*fiveStart.smallRadius+e.offsetY;
+	        x = Math.cos((54 + i * 72 - fiveStart.RotationAngle) / 180 * Math.PI);
+	        x = x * fiveStart.smallRadius + e.offsetX;
+	        y = -Math.sin((54 + i * 72 - fiveStart.RotationAngle) / 180 * Math.PI);
+	        y = y * fiveStart.smallRadius + e.offsetY;
 	        canvasContext.lineTo(x,y);
         }
 		canvasContext.fill();
