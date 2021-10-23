@@ -68,7 +68,6 @@ function drawOnCanvas(e) {
 	if (e.which == 1) {
 		canvasContext.fillStyle = targetColor;
 		canvasContext.beginPath();
-
 		for(var i = 0; i < 5; i++){
 	        x = Math.cos((18+72*i-fiveStart.RotationAngle)/180*Math.PI);
 	        x = x*fiveStart.bigRadius+e.offsetX;
@@ -81,11 +80,6 @@ function drawOnCanvas(e) {
 	        y = y*fiveStart.smallRadius+e.offsetY;
 	        canvasContext.lineTo(x,y);
         }
-
-
-
-
-		// canvasContext.arc(e.offsetX, e.offsetY, 20, 0, 1);
 		canvasContext.fill();
 	}
 }
